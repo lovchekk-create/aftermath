@@ -193,6 +193,28 @@ html[data-mood=turq] .hero-photo img{filter:hue-rotate(125deg) saturate(1.1) bri
 .band-t b{font-family:var(--disp);font-weight:400;font-size:clamp(64px,13vw,220px);line-height:.9;letter-spacing:.04em;color:transparent;-webkit-text-stroke:2px #fff;text-shadow:0 0 60px color-mix(in srgb,var(--a1) 60%,transparent);filter:drop-shadow(0 0 24px color-mix(in srgb,var(--a1) 50%,transparent))}
 .band-t b em{font-style:normal;background:linear-gradient(95deg,var(--a1),var(--a3));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:0}
 
+
+/* contract */
+.ca-sec{padding:clamp(70px,9vw,130px) 0}
+.ca-card{position:relative;text-align:center;padding:clamp(30px,5vw,64px) clamp(18px,4vw,60px);border-radius:28px;background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.03));backdrop-filter:blur(22px);border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 120px -30px color-mix(in srgb,var(--a1) 60%,transparent),inset 0 0 60px rgba(255,255,255,.03);overflow:hidden}
+.ca-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:conic-gradient(from var(--ang,0deg),transparent 0 60%,var(--a1),var(--a2),transparent 90%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:caspin 6s linear infinite;pointer-events:none}
+@property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+@keyframes caspin{to{--ang:360deg}}
+.ca-card .eyebrow{justify-content:center}
+.ca-h{margin:10px 0 26px;font-size:clamp(44px,8vw,110px)}
+.ca-box{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;padding:14px;border-radius:18px;background:rgba(6,1,14,.55);border:1px solid rgba(255,255,255,.14);max-width:960px;margin:0 auto}
+.ca-box code{flex:1 1 360px;min-width:0;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:clamp(12px,1.55vw,19px);letter-spacing:.04em;color:#fff;word-break:break-all;padding:8px 10px;user-select:all;text-shadow:0 0 18px color-mix(in srgb,var(--a2) 70%,transparent)}
+.ca-copy{padding:16px 28px}
+.ca-copy.ok{background:linear-gradient(100deg,#27e6a4,#2fd0ff)}
+.ca-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:22px}
+.ca-links .btn{padding:14px 24px}
+.ca-note{margin-top:22px;font-size:11px;letter-spacing:.08em;line-height:1.7;color:var(--mut);max-width:720px;margin-inline:auto}
+.ca-copy .ic,.ca-links .ic{width:16px;height:16px}
+.ca-pill{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.22);color:#fff;font:600 11px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.06em;transition:all .3s;cursor:pointer;position:absolute;left:50%;bottom:34px;transform:translateX(-50%);z-index:3;white-space:nowrap}
+.ca-pill b{font-family:inherit;color:var(--a3);letter-spacing:.25em;font-size:10px}
+.ca-pill:hover{transform:translateX(-50%) translateY(-2px);border-color:var(--a2);box-shadow:0 0 26px color-mix(in srgb,var(--a2) 45%,transparent)}
+.ca-pill .ic{width:14px;height:14px}
+@media(max-width:700px){.ca-copy{width:100%;justify-content:center}.ca-pill:hover{transform:none}.ca-pill{position:static;transform:none;font-size:10px;max-width:92vw;margin-top:16px;display:inline-flex}.ca-pill span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:48vw}}
 /* mood */
 #mood{position:fixed;left:18px;bottom:18px;z-index:150;display:flex;align-items:center;gap:6px;padding:8px 10px;background:rgba(10,3,24,.6);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:40px}
 #mood span{font-size:9px;letter-spacing:.3em;color:var(--mut);padding:0 6px 0 8px;text-transform:uppercase}
@@ -457,6 +479,7 @@ footer.ft{background:rgba(5,1,12,.78);backdrop-filter:blur(16px);border-top:1px 
       <a class="btn p" href="#world" data-sfx>Explore the world <svg class="ic" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
       <button class="btn g" id="trbtn" data-sfx><svg class="ic" viewBox="0 0 24 24"><path d="m6 4 14 8-14 8z"/></svg> Watch trailer</button>
     </div>
+      <button class="ca-pill" id="caPill" data-sfx aria-label="Copy contract address"><b>CA</b><span>swAe6n…kTvgpump</span><svg class="ic" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg></button>
   </div>
   <div class="hero-bot hr" style="--d:1.3s">
     <div class="scroll"><i></i>Scroll</div>
@@ -528,6 +551,26 @@ footer.ft{background:rgba(5,1,12,.78);backdrop-filter:blur(16px);border-top:1px 
   </div>
 </section>
 
+<!-- CONTRACT -->
+<section id="contract" class="sec ca-sec" aria-label="Contract address">
+  <div class="wrap">
+    <div class="ca-card" data-r="zoom">
+      <div class="eyebrow">Contract Address · Solana</div>
+      <h2 class="h2 ca-h"><span class="gr">$AFTER</span><span class="o">MATH</span></h2>
+      <div class="ca-box">
+        <code id="caTxt" translate="no">swAe6nwDmG2LG9kBiePbjSBKvQdxqaYMGx4kTvgpump</code>
+        <button class="btn p ca-copy" id="caBtn" data-sfx aria-label="Copy contract address"><svg class="ic" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span id="caLbl">Copy</span></button>
+      </div>
+      <div class="ca-links">
+        <a class="btn g" href="https://pump.fun/coin/swAe6nwDmG2LG9kBiePbjSBKvQdxqaYMGx4kTvgpump" target="_blank" rel="noopener noreferrer" data-sfx>Pump.fun <svg class="ic" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="btn g" href="https://dexscreener.com/solana/swAe6nwDmG2LG9kBiePbjSBKvQdxqaYMGx4kTvgpump" target="_blank" rel="noopener noreferrer" data-sfx>DexScreener <svg class="ic" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a class="btn g" href="https://solscan.io/token/swAe6nwDmG2LG9kBiePbjSBKvQdxqaYMGx4kTvgpump" target="_blank" rel="noopener noreferrer" data-sfx>Solscan <svg class="ic" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+      <p class="ca-note">Always verify the contract address before you buy. Community fan token — not financial advice. Unofficial and not affiliated with Rockstar Games.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ABOUT -->
 <section id="about" class="sec">
   <div class="wrap about">
@@ -573,6 +616,7 @@ footer.ft{background:rgba(5,1,12,.78);backdrop-filter:blur(16px);border-top:1px 
       <ul>
         <li><a href="#home">Home</a></li><li><a href="#world">The World</a></li><li><a href="#characters">Characters</a></li><li><a href="#features">Features</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#about">About</a></li>
         <li><a class="ext" href="https://x.com/AFTERMATHCOIN" target="_blank" rel="noopener noreferrer">X / Twitter <svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+        <li><a href="#contract">Contract</a></li>
         <li><a class="ext" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Rockstar official <svg class="ic" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
       </ul>
     </div>
@@ -877,6 +921,21 @@ $('#mood').addEventListener('click',e=>{const b=e.target.closest('button');if(!b
 
 /* ---------- intro ---------- */
 requestAnimationFrame(()=>requestAnimationFrame(()=>document.body.classList.add('ready')));
+
+
+/* ---------- contract copy ---------- */
+(()=>{
+  const CA='swAe6nwDmG2LG9kBiePbjSBKvQdxqaYMGx4kTvgpump',btn=$('#caBtn'),lbl=$('#caLbl'),pill=$('#caPill');
+  const done=()=>{if(!btn)return;btn.classList.add('ok');lbl.textContent='Copied';clearTimeout(done.t);done.t=setTimeout(()=>{btn.classList.remove('ok');lbl.textContent='Copy'},1800)};
+  const copy=async()=>{
+    try{await navigator.clipboard.writeText(CA)}catch(e){
+      try{const t=document.createElement('textarea');t.value=CA;t.setAttribute('readonly','');t.style.cssText='position:fixed;opacity:0';document.body.appendChild(t);t.select();document.execCommand('copy');t.remove()}catch(_){}
+    }
+    done();
+  };
+  btn&&btn.addEventListener('click',copy);
+  pill&&pill.addEventListener('click',()=>{copy();const el=document.getElementById('contract');el&&el.scrollIntoView({behavior:reduce?'auto':'smooth'})});
+})();
 
 /* ---------- nav / scroll ---------- */
 const nav=$('#nav'),prog=$('#prog'),secs=['home','world','characters','features','gallery','about'].map(id=>document.getElementById(id));
