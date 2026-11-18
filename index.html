@@ -460,7 +460,7 @@ footer.ft{background:rgba(5,1,12,.78);backdrop-filter:blur(16px);border-top:1px 
   </div>
   <div class="hero-bot hr" style="--d:1.3s">
     <div class="scroll"><i></i>Scroll</div>
-    <div class="cd" data-cdwrap><span class="lbl">Launch · 19 Nov 2026 · 18:00 UTC</span>
+    <div class="cd" data-cdwrap><span class="lbl">Launch · 18 Nov 2026 · 18:00 UTC</span>
       <div class="u"><b data-cd="d">00</b><span>Days</span></div><div class="u"><b data-cd="h">00</b><span>Hrs</span></div><div class="u"><b data-cd="m">00</b><span>Min</span></div><div class="u"><b data-cd="s">00</b><span>Sec</span></div>
     </div>
   </div>
@@ -552,7 +552,7 @@ footer.ft{background:rgba(5,1,12,.78);backdrop-filter:blur(16px);border-top:1px 
       <div class="cd" data-cdwrap>
         <div class="u"><b data-cd="d">00</b><span>Days</span></div><div class="u"><b data-cd="h">00</b><span>Hrs</span></div><div class="u"><b data-cd="m">00</b><span>Min</span></div><div class="u"><b data-cd="s">00</b><span>Sec</span></div>
       </div>
-      <p class="tiny">Counting down to 19 Nov 2026, 18:00 UTC.</p>
+      <p class="tiny">Counting down to 18 Nov 2026, 18:00 UTC.</p>
     </div>
   </div>
 </section>
@@ -948,7 +948,7 @@ if(fine&&!reduce)$$('.poster').forEach(p=>{
 });
 
 /* ---------- countdown ---------- */
-const TARGET=Date.UTC(2026,10,19,18,0,0);
+const TARGET=Date.UTC(2026,10,18,18,0,0);
 function cdTick(){
   const diff=TARGET-Date.now();
   if(diff<=0){$$('[data-cdwrap]').forEach(w=>{w.innerHTML='<span class="out">OUT NOW</span>'});return false}
