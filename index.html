@@ -80,6 +80,11 @@ body.cur-h .cur-ring::before{left:-34px;top:-34px;width:68px;height:68px;-webkit
 .links a:hover,.links a.on{color:#fff}
 .links a:hover::after,.links a.on::after{transform:scaleX(1)}
 .nav-r{display:flex;align-items:center;gap:12px}
+.xl{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);backdrop-filter:blur(10px);color:#fff;transition:all .3s}
+.xl .ic{width:16px;height:16px;fill:currentColor}
+.xl:hover{color:var(--a1);border-color:var(--a1);box-shadow:0 0 22px color-mix(in srgb,var(--a1) 55%,transparent);transform:translateY(-2px)}
+.xfollow{margin-right:12px}
+.xfollow .ic,.ft .ext .ic{fill:currentColor;stroke:none}
 .snd{display:flex;align-items:center;gap:10px;padding:10px 16px;border:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);font-size:11px;letter-spacing:.24em;text-transform:uppercase;border-radius:2px;transition:border-color .3s,box-shadow .3s}
 .snd:hover{border-color:var(--a1);box-shadow:0 0 20px color-mix(in srgb,var(--a1) 40%,transparent)}
 .eq{display:flex;gap:2px;align-items:flex-end;height:12px}
@@ -416,13 +421,14 @@ footer.ft{background:rgba(5,1,12,.78);backdrop-filter:blur(16px);border-top:1px 
     <li><a href="#features">Features</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#about">About GTA VI</a></li>
   </ul>
   <div class="nav-r">
+    <a class="xl" href="https://x.com/AFTERMATHCOIN" target="_blank" rel="noopener noreferrer" aria-label="AFTERMATH on X (Twitter)" data-sfx><svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
     <button class="snd" id="snd" aria-pressed="false" aria-label="Toggle sound"><span class="eq"><i></i><i></i><i></i><i></i></span><span class="tx" id="sndt">Sound off</span></button>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"></button>
   </div>
 </header>
 <nav id="drawer" aria-label="Mobile menu">
   <a href="#home" style="transition-delay:.05s">Home</a><a href="#world" style="transition-delay:.1s">The World</a><a href="#characters" style="transition-delay:.15s">Characters</a>
-  <a href="#features" style="transition-delay:.2s">Features</a><a href="#gallery" style="transition-delay:.25s">Gallery</a><a href="#about" style="transition-delay:.3s">About GTA VI</a>
+  <a href="#features" style="transition-delay:.2s">Features</a><a href="#gallery" style="transition-delay:.25s">Gallery</a><a href="#about" style="transition-delay:.3s">About GTA VI</a><a href="https://x.com/AFTERMATHCOIN" target="_blank" rel="noopener noreferrer" style="transition-delay:.35s">Follow on X</a>
 </nav>
 
 <div id="mood" role="group" aria-label="Atmosphere"><span>Atmosphere</span></div>
@@ -558,6 +564,7 @@ footer.ft{background:rgba(5,1,12,.78);backdrop-filter:blur(16px);border-top:1px 
     <div class="eyebrow" style="justify-content:center" data-r="up">AFTERMATH · Leonida</div>
     <div class="logo" data-r="zoom"><span class="gt" aria-hidden="true">GRAND THEFT AUTO</span><span class="vi" aria-hidden="true">VI</span></div>
     <p class="world-is" data-r="up"><span>The world<br>is yours</span></p>
+    <a class="btn g xfollow" href="https://x.com/AFTERMATHCOIN" target="_blank" rel="noopener noreferrer" data-sfx data-r="up"><svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> Follow on X</a>
     <button class="btn p top" id="totop" data-sfx data-r="up"><svg class="ic" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg> Back to top</button>
   </div>
   <footer class="ft">
@@ -565,6 +572,7 @@ footer.ft{background:rgba(5,1,12,.78);backdrop-filter:blur(16px);border-top:1px 
       <a href="#home" class="brand"><b>AFTERMATH</b><small>GTA VI · FAN SITE</small></a>
       <ul>
         <li><a href="#home">Home</a></li><li><a href="#world">The World</a></li><li><a href="#characters">Characters</a></li><li><a href="#features">Features</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#about">About</a></li>
+        <li><a class="ext" href="https://x.com/AFTERMATHCOIN" target="_blank" rel="noopener noreferrer">X / Twitter <svg class="ic" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
         <li><a class="ext" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener noreferrer">Rockstar official <svg class="ic" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg></a></li>
       </ul>
     </div>
